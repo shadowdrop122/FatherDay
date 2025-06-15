@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>父亲节快乐</title>
+    <style>
+        body {
+            background: #87ceeb; /* 天蓝色 */
+            font-family: "微软雅黑", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        h1, p, .heart {
+            opacity: 0;
+            animation: fadeIn 1.2s forwards;
+        }
+
+        h1 {
+            color: #2d6a4f;
+            margin-bottom: 16px;
+            animation-delay: 0.2s;
+        }
+
+        p {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 24px;
+            animation-delay: 0.8s;
+        }
+
+        .heart {
+            color: #e63946;
+            font-size: 32px;
+            animation-delay: 1.6s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 云朵文字方框样式 */
+        .cloud-text {
+            position: absolute;
+            min-width: 180px;
+            max-width: 260px;
+            padding: 18px 24px;
+            background: rgba(255,255,255,0.85);
+            border-radius: 30px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            font-size: 18px;
+            color: #2d6a4f;
+            opacity: 0;
+            animation: cloudFadeIn 1.5s forwards, cloudFloat 12s linear infinite;
+        }
+
+        .cloud1 {
+            top: 12%;
+            left: 8%;
+            animation-delay: 0.5s, 0s;
+        }
+
+        .cloud2 {
+            top: 28%;
+            right: 10%;
+            animation-delay: 1.2s, 2s;
+        }
+
+        .cloud3 {
+            bottom: 18%;
+            left: 15%;
+            animation-delay: 2s, 4s;
+        }
+
+        .cloud4 {
+            bottom: 30%;
+            right: 5%;
+            animation-delay: 2.8s, 6s;
+        }
+
+
+        @keyframes cloudFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes cloudFloat {
+            0% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateX(60px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud-text cloud1">祝老爸身体健康，万事如意！</div>
+    <div class="cloud-text cloud2">感谢老爸这么多年对家里的付出！</div>
+    <div class="cloud-text cloud3">万事甲想，永远开心！</div>
+    <div class="cloud-text cloud4">背景音乐好复杂，还不会在网站导入外部资源，做不出来，就不做了</div>
+
+    <div class="card">
+        <h1>老爸父亲节快乐！</h1>
+        <p>差点忘记今天是父亲节了（嘿），赶紧来做一个东西<br>这一次搞高级一点，弄一个网站，至少比给老妈那个高级（开玩笑）</p>
+        <div class="heart">❤️</div>
+    </div>
+</body>
+</html>
+
